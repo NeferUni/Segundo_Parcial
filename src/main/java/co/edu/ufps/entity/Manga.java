@@ -2,6 +2,8 @@ package co.edu.ufps.entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,10 +27,12 @@ public class Manga {
     private boolean juego;
     private boolean pelicula;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "pais_id")
     private Pais pais;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "tipo_id")
     private Tipo tipo;

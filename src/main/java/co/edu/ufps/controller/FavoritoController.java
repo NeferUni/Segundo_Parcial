@@ -4,12 +4,13 @@ import co.edu.ufps.entity.Favorito;
 import co.edu.ufps.service.FavoritoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+@Controller
 @RequestMapping("/favoritos")
 public class FavoritoController {
 
